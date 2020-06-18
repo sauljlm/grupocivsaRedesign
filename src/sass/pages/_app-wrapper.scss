@@ -1,0 +1,43 @@
+.content {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 100px 4% 0;
+}
+
+.gallery {
+  display: flex;
+  width: 100%;
+}
+
+.gallery__image {
+  background-size: cover;
+  height: 250px;
+}
+
+.gallery__image--left {
+  display: none;
+  height: 100vh;
+  width: 40%;
+
+  @media (min-width: $breakpoint-md) {
+    background-position: 25% 0;
+    display: block;
+  }
+  @media (min-width: $breakpoint-lg) {
+    background-position: 5% 0;
+    display: block;
+  }
+}
+
+.gallery__image--right {
+  background-image: url('/static/right.jpg');
+  height: 100vh;
+  width: 100%;
+
+  @media (min-width: $breakpoint-md) {
+    width: 60%;
+  }
+}
